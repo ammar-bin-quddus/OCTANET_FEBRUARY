@@ -10,25 +10,55 @@ body {
 }
 
 #header {
-    width: 100vw;
+    width: 100%;
+    height: 10vh;
     position: fixed;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 20px 50px;
     background-color: #eee;
 }
 
-#header-img {
-    max-width: 300px;
+#home {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/Banner\ template\ design\ abstract\ black\ and\ white\ geometric\ squares\ overlapping\ layer\ on\ clean\ background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#content img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-top: 100px;
+}
+
+#content h1 {
+    font-size: 3em;
+    line-height: 2;
+    color: #1f9eac;
+    margin-top: 100px;
+}
+
+
+
+#content {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw;
+    align-items: flex-end;
 }
 
 #nav-bar ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 70px;
+    gap: 3em;
 
 }
 
@@ -43,12 +73,14 @@ li {
 a {
     color: #000;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.blank {
-    max-width: 1000px;
-    height: 50px;
-    margin: 0 auto;
+a:hover {
+    scale: 1.1;
+    color: #11619E;
+    transition: all ease 0.4s;
+    text-decoration: underline;
 }
 
 #form {
@@ -90,9 +122,10 @@ input::placeholder {
 #submit {
     width: 150px;
     height: 30px;
-    background-color: #FFA500;
+    background-color: #125057;
     border: none;
     cursor: pointer;
+    color: #fff;
 }
 
 input[value="GET STARTED"] {
@@ -103,21 +136,19 @@ input[value="GET STARTED"] {
 }
 
 .container {
-    width: 75vw;
-    height: 250vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0 auto;
+    padding: 5rem 5rem 0rem 5rem;
 }
 
 #Features {
-    max-width: 1000px;
-    height: 400px;
+    width: 100%;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 20px;
     /* border: 2px solid red; */
 }
 
@@ -133,13 +164,13 @@ input[value="GET STARTED"] {
 }
 
 .fa {
-    color: #FF8C00;
+    color: #125057;
 }
 
 
-#How-It-Works {
-    max-width: 1000px;
-    height: 330px;
+#products {
+    width: 100%;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,8 +178,8 @@ input[value="GET STARTED"] {
 }
 
 #Pricing {
-    max-width: 1500px;
-    height: 400px;
+    width: 100%;
+    height: 80vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -158,8 +189,8 @@ input[value="GET STARTED"] {
 }
 
 .cart {
-    width: 350px;
-    height: 350px;
+    width: 30%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -200,17 +231,18 @@ input[value="GET STARTED"] {
 .cart button {
     width: 105px;
     height: 40px;
-    background-color: #FFA500;
+    background-color: black;
     border: none;
     border-radius: 3px;
     margin-bottom: 10px;
     cursor: pointer;
+    color: #fff;
 }
 
 
 #footer {
-    max-width: 1500px;
-    height: 100px;
+    width: 100%;
+    height: 10vh;
     background-color: #DDDDDD;
     display: flex;
     flex-direction: column;
@@ -235,7 +267,8 @@ input[value="GET STARTED"] {
 }
 
 
-@media only screen and (max-width: 1050px) {
+
+@media only screen and (max-width: 1024px) {
     #form {
         width: 100%;
         text-align: center;
@@ -243,7 +276,7 @@ input[value="GET STARTED"] {
 }
 
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 768px) {
     #form {
         width: 100%;
         text-align: center;
@@ -251,16 +284,41 @@ input[value="GET STARTED"] {
 
     #nav-bar ul {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
-        gap: 10px;
+        gap: 20px;
         text-align: center;
     }
 
-    .blank {
-        max-width: 1000px;
-        height: 100px;
-        margin: 0 auto;
+    #content img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-top: 150px;
+    }
+    
+    #content h1 {
+        font-size: 2em;
+        line-height: 2;
+        color: #1f9eac;
+        margin-top: 150px;
+    }
+
+    #content {
+        display: flex;
+        justify-content: space-between;
+        padding: 5vw;
+        align-items: flex-end;
+    }
+
+    #Pricing {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 3vw;
+    }
+    .cart {
+        width: 60%;
     }
 }
 
@@ -274,27 +332,29 @@ input[value="GET STARTED"] {
         flex-direction: column;
         gap: 10px;
     }
-
-    .blank {
-        max-width: 1000px;
-        height: 120px;
-        margin: 0 auto;
+    
+    #content h1 {
+        display: none;
     }
+
+    #content img {
+        margin: 200px auto;
+    }
+    
     #Pricing {
-        height: 50%;
+        height: 90vh;
         display: flex;
         flex-direction: column;
+        padding-bottom: 3vw;
     }
     .cart {
-        width: 70%;
+        width: 60%;
     }
     .container {
-        width: 100vw;
-        height: 350vh;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin: 0 auto;
     }
     .info {
         width: 90%;
